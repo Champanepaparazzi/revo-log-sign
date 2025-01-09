@@ -1,0 +1,208 @@
+/* General Styles */
+:root {
+    --primary: #6a1b9a;
+    --secondary: #9c27b0;
+    --accent: #00e5ff;
+    --dark: #4a148c;
+    --light: #f3e5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-y: auto; /* Enable vertical scrolling */
+    min-height: 100vh;
+}
+
+/* Background Animation Canvas */
+#background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Login/Signup Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease;
+    margin: 1rem;
+}
+
+.login-header h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* Form Styles */
+.login-form {
+    margin-top: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+/* Button Styles */
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
+}
+
+/* Footer Styles */
+.login-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.login-footer a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-footer a:hover {
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 1.5rem; /* Smaller padding for tablets */
+        max-width: 90%; /* Wider container for smaller screens */
+    }
+
+    .login-header h2 {
+        font-size: 1.75rem; /* Smaller heading for tablets */
+    }
+
+    .login-header p {
+        font-size: 0.85rem; /* Smaller text for tablets */
+    }
+
+    .input-group input {
+        padding: 0.6rem; /* Smaller input padding */
+        font-size: 0.9rem; /* Smaller font size for inputs */
+    }
+
+    .login-btn {
+        padding: 0.6rem; /* Smaller button padding */
+        font-size: 0.9rem; /* Smaller button font size */
+    }
+
+    .login-footer {
+        font-size: 0.85rem; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 1rem; /* Even smaller padding for mobile */
+        max-width: 95%; /* Wider container for very small screens */
+    }
+
+    .login-header h2 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+
+    .login-header p {
+        font-size: 0.8rem; /* Smaller text for mobile */
+    }
+
+    .input-group input {
+        padding: 0.5rem; /* Smaller input padding */
+        font-size: 0.85rem; /* Smaller font size for inputs */
+    }
+
+    .login-btn {
+        padding: 0.5rem; /* Smaller button padding */
+        font-size: 0.85rem; /* Smaller button font size */
+    }
+
+    .login-footer {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+}
